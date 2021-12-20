@@ -4,6 +4,17 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
+// Angular social-x login
+// import {
+//   SocialLoginModule,
+//   SocialAuthServiceConfig,
+// } from "angularx-social-login";
+// import {
+//   GoogleLoginProvider,
+//   FacebookLoginProvider,
+// } from "angularx-social-login";
+
+
 // layouts
 import { AdminComponent } from "./layouts/admin/admin.component";
 import { AuthComponent } from "./layouts/auth/auth.component";
@@ -53,6 +64,8 @@ import { CartComponent } from './custom/cart/cart.component';
 import { OrderdetailsComponent } from './custom/orderdetails/orderdetails.component';
 import { DeliverystatusComponent } from './custom/deliverystatus/deliverystatus.component';
 import { Header2Component } from './components/header2/header2.component';
+import { GoogleLoginComponent } from './custom/social-login/google-login/google-login.component';
+import { FacebookLoginComponent } from './custom/social-login/facebook-login/facebook-login.component';
 
 @NgModule({
   declarations: [
@@ -96,6 +109,8 @@ import { Header2Component } from './components/header2/header2.component';
     OrderdetailsComponent,
     DeliverystatusComponent,
     Header2Component,
+    GoogleLoginComponent,
+    FacebookLoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
