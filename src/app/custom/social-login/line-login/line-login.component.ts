@@ -36,8 +36,8 @@ export class LineLoginComponent implements OnInit {
     liff.init(
       { liffId: this.liffId },
       () => {
-        liff.login({ redirectUri: "https://localhost:4200/admin/purchase/" });
-        //liff.login();
+        //liff.login({ redirectUri: "https://localhost:4200/admin/purchase/" });
+        liff.login();
       },
       (err) => console.error(err)
     );
