@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import liff from "@line/liff";
 @Component({
   selector: "app-line-login",
@@ -57,7 +57,11 @@ export class LineLoginComponent implements OnInit {
     liff
       .getProfile()
       .then((profile) => {
-        console.log(profile);
+        console.log(
+          "LINE authen info: ",
+          profile,
+          "more info is in localstorage"
+        );
         this.displayName = profile.displayName;
         this.pictureUrl = profile.pictureUrl;
         this.statusMessage = profile.statusMessage;
@@ -69,6 +73,5 @@ export class LineLoginComponent implements OnInit {
   logout(): void {
     liff.logout();
     window.location.reload();
-
   }
 }
