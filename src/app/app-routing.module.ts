@@ -9,6 +9,7 @@ import { TestnotusComponent } from "./custom/testnotus/testnotus.component";
 // layouts
 import { AdminComponent } from "./layouts/admin/admin.component";
 import { AuthComponent } from "./layouts/auth/auth.component";
+import { HomeComponent } from "./pages/home/home.component";
 
 // admin views
 import { DashboardComponent } from "./views/admin/dashboard/dashboard.component";
@@ -44,21 +45,23 @@ const routes: Routes = [
       { path: "deliverystatus", component: DeliverystatusComponent },
     ],
   },
+
   // auth views
-  {
-    path: "auth",
-    component: AuthComponent,
-    children: [
-      { path: "login", component: LoginComponent },
-      { path: "register", component: RegisterComponent },
-      { path: "", redirectTo: "login", pathMatch: "full" },
-    ],
-  },
+  // {
+  //   path: "auth",
+  //   component: AuthComponent,
+  //   children: [
+  //     { path: "login", component: LoginComponent },
+  //     { path: "register", component: RegisterComponent },
+  //     { path: "", redirectTo: "login", pathMatch: "full" },
+  //   ],
+  // },
+
   // no layout views
   { path: "profile", component: ProfileComponent },
   { path: "landing", component: LandingComponent },
 
-  { path: "", redirectTo: "/auth/login", pathMatch: "full" },
+  { path: "", component: AuthComponent, pathMatch: "full" },
   { path: "**", redirectTo: "", pathMatch: "full" },
   // Custom
 ];

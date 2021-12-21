@@ -4,16 +4,6 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
-// Angular social-x login
-// import {
-//   SocialLoginModule,
-//   SocialAuthServiceConfig,
-// } from "angularx-social-login";
-// import {
-//   GoogleLoginProvider,
-//   FacebookLoginProvider,
-// } from "angularx-social-login";
-
 
 // layouts
 import { AdminComponent } from "./layouts/admin/admin.component";
@@ -66,6 +56,11 @@ import { DeliverystatusComponent } from './custom/deliverystatus/deliverystatus.
 import { Header2Component } from './components/header2/header2.component';
 import { GoogleLoginComponent } from './custom/social-login/google-login/google-login.component';
 import { FacebookLoginComponent } from './custom/social-login/facebook-login/facebook-login.component';
+import { LineLoginComponent } from './custom/social-login/line-login/line-login.component';
+import { HomeComponent } from './pages/home/home.component';
+
+
+ 
 
 @NgModule({
   declarations: [
@@ -111,6 +106,8 @@ import { FacebookLoginComponent } from './custom/social-login/facebook-login/fac
     Header2Component,
     GoogleLoginComponent,
     FacebookLoginComponent,
+    LineLoginComponent,
+    HomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
